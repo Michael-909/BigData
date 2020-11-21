@@ -1,0 +1,18 @@
+{
+	"ReportJournalId": "d747048d222",
+	"WellId": "22",
+	"DatePrinted": null,
+	"WellboreId": "22",
+	"CompletionId": "22",
+	"DateLocked": null,
+	"EventId": "22",
+	"AfeId": "1",
+	"RigId": "1",
+	"DateModified": null,
+	"DateReport": null,
+	"DateTransmitted": null,
+	"ReportNo": "re1",
+	"Description": "Update test",
+	"EntityType": "updated test",
+	"EventCode": "Event codes"
+}
