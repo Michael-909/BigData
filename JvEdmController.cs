@@ -24,6 +24,10 @@ namespace BigData
         private readonly CdDefinitiveSurveyHeaderTRepository cdDefinitiveSurveyHeaderTRepository;
         private readonly CdFluidTRepository cdFluidTRepository;
         private readonly CdHoleSectGroupTRepository cdHoleSectGroupTRepository;
+        private readonly CdHoleSectTRepository cdHoleSectTRepository;
+        private readonly CdPerforateTRepository cdPerforateTRepository;
+        private readonly CdPolicyRepository cdPolicyRepository;
+        private readonly CdProjectSourceRepository cdProjectSourceRepository;
 
         public JvEdmController()
         {
@@ -40,6 +44,11 @@ namespace BigData
             cdDatumTRepository = new CdDatumTRepository();
             cdDefinitiveSurveyHeaderTRepository = new CdDefinitiveSurveyHeaderTRepository();
             cdFluidTRepository = new CdFluidTRepository();
+            cdHoleSectGroupTRepository = new CdHoleSectGroupTRepository();
+            cdHoleSectTRepository = new CdHoleSectTRepository();
+            cdPerforateTRepository = new CdPerforateTRepository();
+            cdPolicyRepository = new CdPolicyRepository();
+            cdProjectSourceRepository = new CdProjectSourceRepository();
         }
 
         #region DmReportJournal
@@ -130,7 +139,7 @@ namespace BigData
         {
             return cdBhaCompBitTRepository.GetRows();
         }
-        public bool Create(string jsonData)
+        public bool CreateCdBhaBitT(string jsonData)
         {
             return cdBhaCompBitTRepository.Create(jsonData);
         }
@@ -331,6 +340,94 @@ namespace BigData
         public bool DeleteCdHoleSectGroupT(string Id)
         {
             return cdHoleSectGroupTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdHoleSectT
+        public IEnumerable<CdHoleSectT> GetCdHoleSectT()
+        {
+            return cdHoleSectTRepository.GetRows();
+        }
+
+        public bool CreateCdHoleSectT(string jsonData)
+        {
+            return cdHoleSectTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdHoleSectT(string Id, string jsonData)
+        {
+            return cdHoleSectTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdHoleSectT(string Id)
+        {
+            return cdHoleSectTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdPerforateT
+        public IEnumerable<CdPerforateT> GetCdPerforateT()
+        {
+            return cdPerforateTRepository.GetRows();
+        }
+
+        public bool CreateCdPerforateT(string jsonData)
+        {
+            return cdPerforateTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdPerforateT(string Id, string jsonData)
+        {
+            return cdPerforateTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdPerforateT(string Id)
+        {
+            return cdPerforateTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdPolicy
+        public IEnumerable<CdPolicy> GetCdPolicy()
+        {
+            return cdPolicyRepository.GetRows();
+        }
+
+        public bool CreateCdPolicy(string jsonData)
+        {
+            return cdPolicyRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdPolicy(string Id, string jsonData)
+        {
+            return cdPolicyRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdPolicy(string Id)
+        {
+            return cdPolicyRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdProjectSource
+        public IEnumerable<CdProjectSource> GetCdProjectSource()
+        {
+            return cdProjectSourceRepository.GetRows();
+        }
+
+        public bool CreateCdProjectSource(string jsonData)
+        {
+            return cdProjectSourceRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdProjectSource(string Id, string jsonData)
+        {
+            return cdProjectSourceRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdProjectSource(string Id)
+        {
+            return cdProjectSourceRepository.Delete(Id);
         }
         #endregion
     }
