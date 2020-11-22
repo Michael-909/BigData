@@ -44,6 +44,12 @@ namespace BigData
         private readonly DmActivityTRepository dmActivityTRepository;
         private readonly DmAfeRepository dmAfeRepository;
         private readonly DmAfeSuppRepository dmAfeSuppRepository;
+        private readonly DmAnchorOpTRepository dmAnchorOpTRepository;
+        private readonly DmBhaOpTRepository dmBhaOpTRepository;
+        private readonly DmBhaRunTRepository dmBhaRunTRepository;
+        private readonly DmBitOpTRepository dmBitOpTRepository;
+        private readonly DmBulkTRepository dmBulkTRepository;
+        private readonly DmBulkTranTRepository dmBulkTranTRepository;
 
         public JvEdmController()
         {
@@ -81,6 +87,11 @@ namespace BigData
             dmActivityTRepository = new DmActivityTRepository();
             dmAfeRepository = new DmAfeRepository();
             dmAfeSuppRepository = new DmAfeSuppRepository();
+            dmBhaOpTRepository = new DmBhaOpTRepository();
+            dmBhaRunTRepository = new DmBhaRunTRepository();
+            dmBitOpTRepository = new DmBitOpTRepository();
+            dmBulkTRepository = new DmBulkTRepository();
+            dmBulkTranTRepository = new DmBulkTranTRepository();
         }
 
         #region DmReportJournal
@@ -812,6 +823,138 @@ namespace BigData
         public bool DeleteDmAfeSupp(string Id)
         {
             return dmAfeRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmAnchorOpT
+        public IEnumerable<DmAnchorOpT> GetDmAnchorOpTs()
+        {
+            return dmAnchorOpTRepository.GetRows();
+        }
+
+        public bool CreateDmAnchorOpT(string jsonData)
+        {
+            return dmAnchorOpTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmAnchorOpT(string Id, string jsonData)
+        {
+            return dmAnchorOpTRepository.Update(Id, jsonData);
+        }
+
+        public bool Delete(string Id)
+        {
+            return dmAnchorOpTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmBhaOpT
+        public IEnumerable<DmBhaOpT> GetDmBhaOpTs()
+        {
+            return dmBhaOpTRepository.GetRows();
+        }
+
+        public bool CreateDmBhaOpT(string jsonData)
+        {
+            return dmBhaOpTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmBhaOpT(string Id, string jsonData)
+        {
+            return dmBhaOpTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmBhaOpT(string Id)
+        {
+            return dmBhaOpTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmBhaRunT
+        public IEnumerable<DmBhaRunT> GetDmBhaRunTs()
+        {
+            return dmBhaRunTRepository.GetRows();
+        }
+
+        public bool CreateDmBhaRunT(string jsonData)
+        {
+            return dmBhaRunTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmBhaRunT(string Id, string jsonData)
+        {
+            return dmBhaRunTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmBhaRunT(string Id)
+        {
+            return dmBhaRunTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmBitOpT
+        public IEnumerable<DmBitOpT> GetDmBitOpTs()
+        {
+            return dmBitOpTRepository.GetRows();
+        }
+
+        public bool CreateDmBitOpT(string jsonData)
+        {
+            return dmBitOpTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmBitOpT(string Id, string jsonData)
+        {
+            return dmBitOpTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmBitOpT(string Id)
+        {
+            return dmBitOpTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmBulkT
+        public IEnumerable<DmBulkT> GetDmBulkTs()
+        {
+            return dmBulkTRepository.GetRows();
+        }
+
+        public bool CreateDmBulkT(string jsonData)
+        {
+            return dmBulkTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmBulkT(string Id, string jsonData)
+        {
+            return dmBulkTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmBulkT(string Id)
+        {
+            return dmBulkTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmBulkTranT
+        public IEnumerable<DmBulkTranT> GetDmBulkTranTs()
+        {
+            return dmBulkTranTRepository.GetRows();
+        }
+
+        public bool CreateDmBulkTranT(string jsonData)
+        {
+            return dmBulkTranTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmBulkTranT(string Id, string jsonData)
+        {
+            return dmBulkTranTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmBulkTranT(string Id)
+        {
+            return dmBulkTranTRepository.Delete(Id);
         }
         #endregion
     }
