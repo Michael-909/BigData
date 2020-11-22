@@ -28,6 +28,15 @@ namespace BigData
         private readonly CdPerforateTRepository cdPerforateTRepository;
         private readonly CdPolicyRepository cdPolicyRepository;
         private readonly CdProjectSourceRepository cdProjectSourceRepository;
+        private readonly CdRigRepository cdRigRepository;
+        private readonly CdRigAnchorRepository cdRigAnchorRepository;
+        private readonly CdRigCentrifugeRepository cdRigCentrifugeRepository;
+        private readonly CdRigHydrocloneRepository cdRigHydrocloneRepository;
+        private readonly CdRigPumpRepository cdRigPumpRepository;
+        private readonly CdSiteSourceRepository cdSiteSourceRepository;
+        private readonly CdSurveyHeaderTRepository cdSurveyHeaderTRepository;
+        private readonly CdSurveyStationTRepository cdSurveyStationTRepository;
+        private readonly CdVgMeterTRepository cdVgMeterTRepository;
 
         public JvEdmController()
         {
@@ -49,6 +58,15 @@ namespace BigData
             cdPerforateTRepository = new CdPerforateTRepository();
             cdPolicyRepository = new CdPolicyRepository();
             cdProjectSourceRepository = new CdProjectSourceRepository();
+            cdRigRepository = new CdRigRepository();
+            cdRigAnchorRepository = new CdRigAnchorRepository();
+            cdRigCentrifugeRepository = new CdRigCentrifugeRepository();
+            cdRigHydrocloneRepository = new CdRigHydrocloneRepository();
+            cdRigPumpRepository = new CdRigPumpRepository();
+            cdSiteSourceRepository = new CdSiteSourceRepository();
+            cdSurveyHeaderTRepository = new CdSurveyHeaderTRepository();
+            cdSurveyStationTRepository = new CdSurveyStationTRepository();
+            cdVgMeterTRepository = new CdVgMeterTRepository();
         }
 
         #region DmReportJournal
@@ -428,6 +446,204 @@ namespace BigData
         public bool DeleteCdProjectSource(string Id)
         {
             return cdProjectSourceRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdRig
+        public IEnumerable<CdRig> GetCdRig()
+        {
+            return cdRigRepository.GetRows();
+        }
+
+        public bool CreateCdRig(string jsonData)
+        {
+            return cdRigRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdRig(string Id, string jsonData)
+        {
+            return cdRigRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdRig(string Id)
+        {
+            return cdRigRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdRigAnchor
+        public IEnumerable<CdRigAnchor> GetCdRigAnchor()
+        {
+            return cdRigAnchorRepository.GetRows();
+        }
+
+        public bool CreateCdRigAnchor(string jsonData)
+        {
+            return cdRigAnchorRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdRigAnchor(string Id, string jsonData)
+        {
+            return cdRigAnchorRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdRigAnchor(string Id)
+        {
+            return cdRigAnchorRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdRigCentrifuge
+        public IEnumerable<CdRigCentrifuge> GetCdRigCentrifuge()
+        {
+            return cdRigCentrifugeRepository.GetRows();
+        }
+
+        public bool CreateCdRigCentrifuge(string jsonData)
+        {
+            return cdRigCentrifugeRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdRigCentrifuge(string Id, string jsonData)
+        {
+            return cdRigCentrifugeRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdRigCentrifuge(string Id)
+        {
+            return cdRigCentrifugeRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdRigHydroclone
+        public IEnumerable<CdRigHydroclone> GetCdRigHydroclones()
+        {
+            return cdRigHydrocloneRepository.GetRows();
+        }
+
+        public bool CreateCdRigHydroclone(string jsonData)
+        {
+            return cdRigHydrocloneRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdRigHydroclone(string Id, string jsonData)
+        {
+            return cdRigHydrocloneRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdRigHydroclone(string Id)
+        {
+            return cdRigHydrocloneRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdRigPumpRepository
+        public IEnumerable<CdRigPump> GetCdRigPump()
+        {
+            return cdRigPumpRepository.GetRows();
+        }
+
+        public bool CreateCdRigPump(string jsonData)
+        {
+            return cdRigPumpRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdRigPump(string Id, string jsonData)
+        {
+            return cdRigPumpRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdRigPump(string Id)
+        {
+            return cdRigPumpRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdSiteSource
+        public IEnumerable<CdSiteSource> GetCdSiteSource()
+        {
+            return cdSiteSourceRepository.GetRows();
+        }
+
+        public bool Create(string jsonData)
+        {
+            return cdSiteSourceRepository.Create(jsonData);
+        }
+
+        public bool Update(string Id, string jsonData)
+        {
+            return cdSiteSourceRepository.Update(Id, jsonData);
+        }
+
+        public bool Delete(string Id)
+        {
+            return cdSiteSourceRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdSruveyHeaderT
+        public IEnumerable<CdSurveyHeaderT> GetCdSruveyHeaderT()
+        {
+            return cdSurveyHeaderTRepository.GetRows();
+        }
+
+        public bool CreateCdSurveyHeaderT(string jsonData)
+        {
+            return cdSurveyHeaderTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdSurveyHeaderT(string Id, string jsonData)
+        {
+            return cdSurveyHeaderTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdSurveyHeaderT(string Id)
+        {
+            return cdSurveyHeaderTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdSurveyStationT
+        public IEnumerable<CdSurveyStationT> GetCdSurveyStationT()
+        {
+            return cdSurveyStationTRepository.GetRows();
+        }
+
+        public bool CreateCdSurveyStationT(string jsonData)
+        {
+            return cdSurveyStationTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdSurveyStationT(string Id, string jsonData)
+        {
+            return cdSurveyStationTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdSurveyStationT(string Id)
+        {
+            return cdSurveyStationTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdVgMeterT
+        public IEnumerable<CdVgMeterT> GetCdVgMeterTs()
+        {
+            return cdVgMeterTRepository.GetRows();
+        }
+
+        public bool CreateCdVgMeterT(string jsonData)
+        {
+            return cdVgMeterTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdVgMeterT(string Id, string jsonData)
+        {
+            return cdVgMeterTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdVgMeterT(string Id)
+        {
+            return cdVgMeterTRepository.Delete(Id);
         }
         #endregion
     }
