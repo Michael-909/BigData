@@ -50,6 +50,11 @@ namespace BigData
         private readonly DmBitOpTRepository dmBitOpTRepository;
         private readonly DmBulkTRepository dmBulkTRepository;
         private readonly DmBulkTranTRepository dmBulkTranTRepository;
+        private readonly DmCentrifugeOpTRepository dmCentrifugeOpTRepository;
+        private readonly DmCompanyDailyTRepository dmCompanyDailyTRepository;
+        private readonly DmCompanyTRepository dmCompanyTRepository;
+        private readonly DmCrCleanupTRepository dmCrCleanupTRepository;
+        private readonly DmCrMudAdditiveTRepository dmCrMudAdditiveTRepository;
 
         public JvEdmController()
         {
@@ -92,6 +97,11 @@ namespace BigData
             dmBitOpTRepository = new DmBitOpTRepository();
             dmBulkTRepository = new DmBulkTRepository();
             dmBulkTranTRepository = new DmBulkTranTRepository();
+            dmCentrifugeOpTRepository = new DmCentrifugeOpTRepository();
+            dmCompanyDailyTRepository = new DmCompanyDailyTRepository();
+            dmCompanyTRepository = new DmCompanyTRepository();
+            dmCrCleanupTRepository = new DmCrCleanupTRepository();
+            dmCrMudAdditiveTRepository = new DmCrMudAdditiveTRepository();
         }
 
         #region DmReportJournal
@@ -955,6 +965,116 @@ namespace BigData
         public bool DeleteDmBulkTranT(string Id)
         {
             return dmBulkTranTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmCentrifugeOpT
+        public IEnumerable<DmCentrifugeOpT> GetDmCentrifugeOpTs()
+        {
+            return dmCentrifugeOpTRepository.GetRows();
+        }
+
+        public bool CreateDmCentrifugeOpT(string jsonData)
+        {
+            return dmCentrifugeOpTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmCentrifugeOpT(string Id, string jsonData)
+        {
+            return dmCentrifugeOpTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmCentrifugeOpT(string Id)
+        {
+            return dmCentrifugeOpTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmCompanyDailyT
+        public IEnumerable<DmCompanyDailyT> GetDmCompanyDailyTs()
+        {
+            return dmCompanyDailyTRepository.GetRows();
+        }
+
+        public bool CreateDmCompanyDailyT(string jsonData)
+        {
+            return dmCompanyDailyTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmCompanyDailyT(string Id, string jsonData)
+        {
+            return dmCompanyDailyTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmCompanyDailyT(string Id)
+        {
+            return dmCompanyDailyTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmCompanyT
+        public IEnumerable<DmCompanyT> GetDmCompanyTs()
+        {
+            return dmCompanyTRepository.GetRows();
+        }
+
+        public bool CreateDmCompanyT(string jsonData)
+        {
+            return dmCompanyTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmCompanyT(string Id, string jsonData)
+        {
+            return dmCompanyTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmCompanyT(string Id)
+        {
+            return dmCompanyTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmCrCleanupT
+        public IEnumerable<DmCrCleanupT> GetDmCrCleanupTs()
+        {
+            return dmCrCleanupTRepository.GetRows();
+        }
+
+        public bool CreateDmCrCleanupT(string jsonData)
+        {
+            return dmCrCleanupTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmCrCleanupT(string Id, string jsonData)
+        {
+            return dmCrCleanupTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmCrCleanupT(string Id)
+        {
+            return dmCrCleanupTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmCrMudAdditiveT
+        public IEnumerable<DmCrMudAdditiveT> GetDmCrMudAdditiveTs()
+        {
+            return dmCrMudAdditiveTRepository.GetRows();
+        }
+
+        public bool CreateDmCrMudAdditiveT(string jsonData)
+        {
+            return dmCrMudAdditiveTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmCrMudAdditiveT(string Id, string jsonData)
+        {
+            return dmCrMudAdditiveTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmCrMudAdditiveT(string Id)
+        {
+            return dmCrMudAdditiveTRepository.Delete(Id);
         }
         #endregion
     }

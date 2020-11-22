@@ -10,7 +10,7 @@ namespace BigData
 
             string json = System.IO.File.ReadAllText(@"D:\WorkTempFolder\BigData\model.json");
 
-            var result = controller.updateDmReportJournal("d747048d", json);
+            var result = controller.UpdateCdAssemblyCompT("d747048d", json);
 
             Console.WriteLine(result.ToString());
         }
