@@ -55,6 +55,12 @@ namespace BigData
         private readonly DmCompanyTRepository dmCompanyTRepository;
         private readonly DmCrCleanupTRepository dmCrCleanupTRepository;
         private readonly DmCrMudAdditiveTRepository dmCrMudAdditiveTRepository;
+        private readonly DmDailyDitchMagnetTRepository dmDailyDitchMagnetTRepository;
+        private readonly DmDailyNotificationTRepository dmDailyNotificationTRepository;
+        private readonly DmDailyTRepository dmDailyTRepository;
+        private readonly DmEnvironmentalTRepository dmEnvironmentalTRepository;
+        private readonly DmEventTRepository dmEventTRepository;
+        private readonly DmHydrocloneOpTRepository dmHydrocloneOpTRepository;
 
         public JvEdmController()
         {
@@ -92,6 +98,7 @@ namespace BigData
             dmActivityTRepository = new DmActivityTRepository();
             dmAfeRepository = new DmAfeRepository();
             dmAfeSuppRepository = new DmAfeSuppRepository();
+            dmAnchorOpTRepository = new DmAnchorOpTRepository();
             dmBhaOpTRepository = new DmBhaOpTRepository();
             dmBhaRunTRepository = new DmBhaRunTRepository();
             dmBitOpTRepository = new DmBitOpTRepository();
@@ -102,6 +109,12 @@ namespace BigData
             dmCompanyTRepository = new DmCompanyTRepository();
             dmCrCleanupTRepository = new DmCrCleanupTRepository();
             dmCrMudAdditiveTRepository = new DmCrMudAdditiveTRepository();
+            dmDailyDitchMagnetTRepository = new DmDailyDitchMagnetTRepository();
+            dmDailyNotificationTRepository = new DmDailyNotificationTRepository();
+            dmDailyTRepository = new DmDailyTRepository();
+            dmEnvironmentalTRepository = new DmEnvironmentalTRepository();
+            dmEventTRepository = new DmEventTRepository();
+            dmHydrocloneOpTRepository = new DmHydrocloneOpTRepository();
         }
 
         #region DmReportJournal
@@ -1075,6 +1088,138 @@ namespace BigData
         public bool DeleteDmCrMudAdditiveT(string Id)
         {
             return dmCrMudAdditiveTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmDailyDitchMagnetT
+        public IEnumerable<DmDailyDitchMagnetT> GetDmDailyDitchMagnetTs()
+        {
+            return dmDailyDitchMagnetTRepository.GetRows();
+        }
+
+        public bool CreateDmDailyDitchMagnetT(string jsonData)
+        {
+            return dmDailyDitchMagnetTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmDailyDitchMagnetT(string Id, string jsonData)
+        {
+            return dmDailyDitchMagnetTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmDailyDitchMagnetT(string Id)
+        {
+            return dmDailyDitchMagnetTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmDailyNotificationT
+        public IEnumerable<DmDailyNotificationT> GetDmDailyNotificationTs()
+        {
+            return dmDailyNotificationTRepository.GetRows();
+        }
+
+        public bool CreateDmDailyNotificationT(string jsonData)
+        {
+            return dmDailyNotificationTRepository.Create(jsonData);
+        }
+
+        public bool UdateDmDailyNotificationT(string Id, string jsonData)
+        {
+            return dmDailyNotificationTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmDailyNotificationT(string Id)
+        {
+            return dmDailyNotificationTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmDailyT
+        public IEnumerable<DmDailyT> GetDmDailyTs()
+        {
+            return dmDailyTRepository.GetRows();
+        }
+
+        public bool CreateDmDailyT(string jsonData)
+        {
+            return dmDailyTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDailyT(string Id, string jsonData)
+        {
+            return dmDailyTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDailyT(string Id)
+        {
+            return dmDailyTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmEnvironmentalT
+        public IEnumerable<DmEnvironmentalT> GetDmEnvironmentalTs()
+        {
+            return dmEnvironmentalTRepository.GetRows();
+        }
+
+        public bool CreateDmEnvironmentalT(string jsonData)
+        {
+            return dmEnvironmentalTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmEnvironmentalT(string Id, string jsonData)
+        {
+            return dmEnvironmentalTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmEnvironmentalT(string Id)
+        {
+            return dmEnvironmentalTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmEventT
+        public IEnumerable<DmEventT> GetDmEventTs()
+        {
+            return dmEventTRepository.GetRows();
+        }
+
+        public bool CreateDmEventT(string jsonData)
+        {
+            return dmEventTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmEventT(string Id, string jsonData)
+        {
+            return dmEventTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmEventT(string Id)
+        {
+            return dmEventTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmHydrocloneOpT
+        public IEnumerable<DmHydrocloneOpT> GetDmHydrocloneOpTs()
+        {
+            return dmHydrocloneOpTRepository.GetRows();
+        }
+
+        public bool CreateDmHydrocloneOpT(string jsonData)
+        {
+            return dmHydrocloneOpTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmHydrocloneOpT(string Id, string jsonData)
+        {
+            return dmHydrocloneOpTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmHydrocloneOpT(string Id)
+        {
+            return dmHydrocloneOpTRepository.Delete(Id);
         }
         #endregion
     }
