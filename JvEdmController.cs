@@ -41,6 +41,9 @@ namespace BigData
         private readonly CdWellStatusTRepository cdWellStatusTRepository;
         private readonly CdWellboreFormationTRepository cdWellboreFormationTRepository;
         private readonly CdWellboreTRepository cdWellboreTRepository;
+        private readonly DmActivityTRepository dmActivityTRepository;
+        private readonly DmAfeRepository dmAfeRepository;
+        private readonly DmAfeSuppRepository dmAfeSuppRepository;
 
         public JvEdmController()
         {
@@ -75,6 +78,9 @@ namespace BigData
             cdWellStatusTRepository = new CdWellStatusTRepository();
             cdWellboreFormationTRepository = new CdWellboreFormationTRepository();
             cdWellboreTRepository = new CdWellboreTRepository();
+            dmActivityTRepository = new DmActivityTRepository();
+            dmAfeRepository = new DmAfeRepository();
+            dmAfeSuppRepository = new DmAfeSuppRepository();
         }
 
         #region DmReportJournal
@@ -740,6 +746,72 @@ namespace BigData
         public bool DeleteCdWellboreT(string Id)
         {
             return cdWellboreTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmReportActivityT
+        public IEnumerable<DmActivityT> GetDmActivityTs()
+        {
+            return dmActivityTRepository.GetRows();
+        }
+
+        public bool CreateDmActivityT(string jsonData)
+        {
+            return dmActivityTRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmActivityT(string Id, string jsonData)
+        {
+            return dmActivityTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmActivityT(string Id)
+        {
+            return dmActivityTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmAfe
+        public IEnumerable<DmAfe> GetDmAfe()
+        {
+            return dmAfeRepository.GetRows();
+        }
+
+        public bool CreateDmAfe(string jsonData)
+        {
+            return dmAfeRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmAfe(string Id, string jsonData)
+        {
+            return dmAfeRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmAfe(string Id)
+        {
+            return dmAfeRepository.Delete(Id);
+        }
+        #endregion
+
+        #region DmAfeSupp
+        public IEnumerable<DmAfeSupp> GetDmAfeSupps()
+        {
+            return dmAfeSuppRepository.GetRows();
+        }
+
+        public bool CreateDmAfeSupp(string jsonData)
+        {
+            return dmAfeSuppRepository.Create(jsonData);
+        }
+
+        public bool UpdateDmAfeSupp(string Id, string jsonData)
+        {
+            return dmAfeSuppRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteDmAfeSupp(string Id)
+        {
+            return dmAfeRepository.Delete(Id);
         }
         #endregion
     }
