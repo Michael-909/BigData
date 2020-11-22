@@ -37,6 +37,10 @@ namespace BigData
         private readonly CdSurveyHeaderTRepository cdSurveyHeaderTRepository;
         private readonly CdSurveyStationTRepository cdSurveyStationTRepository;
         private readonly CdVgMeterTRepository cdVgMeterTRepository;
+        private readonly CdWellSourceRepository cdWellSourceRepository;
+        private readonly CdWellStatusTRepository cdWellStatusTRepository;
+        private readonly CdWellboreFormationTRepository cdWellboreFormationTRepository;
+        private readonly CdWellboreTRepository cdWellboreTRepository;
 
         public JvEdmController()
         {
@@ -67,6 +71,10 @@ namespace BigData
             cdSurveyHeaderTRepository = new CdSurveyHeaderTRepository();
             cdSurveyStationTRepository = new CdSurveyStationTRepository();
             cdVgMeterTRepository = new CdVgMeterTRepository();
+            cdWellSourceRepository = new CdWellSourceRepository();
+            cdWellStatusTRepository = new CdWellStatusTRepository();
+            cdWellboreFormationTRepository = new CdWellboreFormationTRepository();
+            cdWellboreTRepository = new CdWellboreTRepository();
         }
 
         #region DmReportJournal
@@ -565,17 +573,17 @@ namespace BigData
             return cdSiteSourceRepository.GetRows();
         }
 
-        public bool Create(string jsonData)
+        public bool CreateCdSiteSource(string jsonData)
         {
             return cdSiteSourceRepository.Create(jsonData);
         }
 
-        public bool Update(string Id, string jsonData)
+        public bool UpdateCdSiteSource(string Id, string jsonData)
         {
             return cdSiteSourceRepository.Update(Id, jsonData);
         }
 
-        public bool Delete(string Id)
+        public bool DeleteCdSiteSource(string Id)
         {
             return cdSiteSourceRepository.Delete(Id);
         }
@@ -644,6 +652,94 @@ namespace BigData
         public bool DeleteCdVgMeterT(string Id)
         {
             return cdVgMeterTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdWellSourceRepository
+        public IEnumerable<CdWellSource> GetCdWellSources()
+        {
+            return cdWellSourceRepository.GetRows();
+        }
+
+        public bool CreateCdWellSource(string jsonData)
+        {
+            return cdWellSourceRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdWellSource(string Id, string jsonData)
+        {
+            return cdWellSourceRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdWellSource(string Id)
+        {
+            return cdWellSourceRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdWellStatusT
+        public IEnumerable<CdWellStatusT> GetCdWellStatusTs()
+        {
+            return cdWellStatusTRepository.GetRows();
+        }
+
+        public bool CreateCdWellStatusT(string jsonData)
+        {
+            return cdWellStatusTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdWellStatusT(string Id, string jsonData)
+        {
+            return cdWellStatusTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdWellStatusT(string Id)
+        {
+            return cdWellStatusTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdWellboreFormationT
+        public IEnumerable<CdWellboreFormationT> GetCdWellboreFormationTs()
+        {
+            return cdWellboreFormationTRepository.GetRows();
+        }
+
+        public bool CreateCdWellboreFormationT(string jsonData)
+        {
+            return cdWellboreFormationTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdWellboreFormationT(string Id, string jsonData)
+        {
+            return cdWellboreFormationTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdWellboreFormationT(string Id)
+        {
+            return cdWellboreFormationTRepository.Delete(Id);
+        }
+        #endregion
+
+        #region CdWellboreT
+        public IEnumerable<CdWellboreT> GetCdWellboreTs()
+        {
+            return cdWellboreTRepository.GetRows();
+        }
+
+        public bool CreateCdWellboreT(string jsonData)
+        {
+            return cdWellboreTRepository.Create(jsonData);
+        }
+
+        public bool UpdateCdWellboreT(string Id, string jsonData)
+        {
+            return cdWellboreTRepository.Update(Id, jsonData);
+        }
+
+        public bool DeleteCdWellboreT(string Id)
+        {
+            return cdWellboreTRepository.Delete(Id);
         }
         #endregion
     }
