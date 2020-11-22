@@ -8,11 +8,11 @@ using System.Text;
 
 namespace BigData.Repositories
 {
-    public class DmMudProductTrainTRepository
+    public class DmMudProductTranTRepository
     {
         private readonly jv_edm_dbContext dbContext;
 
-        public DmMudProductTrainTRepository()
+        public DmMudProductTranTRepository()
         {
             dbContext = new jv_edm_dbContext();
         }
