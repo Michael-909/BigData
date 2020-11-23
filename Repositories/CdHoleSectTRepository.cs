@@ -1,10 +1,7 @@
 ﻿using BigData.Helpers;
 using BigData.Models;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BigData.Repositories
 {
@@ -22,19 +19,18 @@ namespace BigData.Repositories
             return dbContext.CdHoleSectT.Select(x => x).ToList();
         }
 
-        public bool Create(string jsonData)
+        public bool Create(CdHoleSectT data)
         {
-            var model = JsonConvert.DeserializeObject<CdHoleSectT>(jsonData);
-            model.HoleSectId = NormalHelper.GenerateNormalKey();
-            dbContext.CdHoleSectT.Add(model);
+            data.HoleSectId = NormalHelper.GenerateNormalKey();
+            dbContext.CdHoleSectT.Add(data);
             return dbContext.SaveChanges() > 0;
         }
 
-        public bool Update(string Id, string jsonData)
+        public bool Update(string Id, CdHoleSectT data)
         {
             var model = dbContext.CdHoleSectT.SingleOrDefault(x => x.HoleSectId == Id);
             if (model == null) return false;
-            model = JsonConvert.DeserializeObject<CdHoleSectT>(jsonData);
+            model = data;
             dbContext.CdHoleSectT.Update(model);
             return dbContext.SaveChanges() > 0;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace BigData
 {
@@ -9,8 +10,8 @@ namespace BigData
             JvEdmController controller = new JvEdmController();
 
             string json = System.IO.File.ReadAllText(@"D:\WorkTempFolder\BigData\model.json");
-
-            var result = controller.UpdateCdAssemblyCompT("d747048d", json);
+            var data = JsonConvert.DeserializeObject<Models.DmReportJournal>(json);
+            var result = controller.CreateDmReportJournal(data);
 
             Console.WriteLine(result.ToString());
         }

@@ -1,10 +1,6 @@
 ﻿using BigData.Models;
 using BigData.Repositories;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BigData
 {
@@ -160,14 +156,14 @@ namespace BigData
         {
             return dmReportJournalRepository.GetRows();
         }
-        public bool CreateDmReportJournal(string jsonData)
+        public bool CreateDmReportJournal(DmReportJournal data)
         {
-            return dmReportJournalRepository.Create(jsonData);
+            return dmReportJournalRepository.Create(data);
         }
 
-        public bool UpdateDmReportJournal(string Id, string jsonData)
+        public bool UpdateDmReportJournal(string Id, DmReportJournal data)
         {
-            return dmReportJournalRepository.Update(Id, jsonData);
+            return dmReportJournalRepository.Update(Id, data);
         }
         public bool DeleteDmReportJournal(string Id)
         {
@@ -180,13 +176,13 @@ namespace BigData
         {
             return cdAssemblyCompTRepository.GetRows();
         }
-        public bool CreateCdAssemblyCompT(string jsonData)
+        public bool CreateCdAssemblyCompT(CdAssemblyCompT data)
         {
-            return cdAssemblyCompTRepository.Create(jsonData);
+            return cdAssemblyCompTRepository.Create(data);
         }
-        public bool UpdateCdAssemblyCompT(string Id, string jsonData)
+        public bool UpdateCdAssemblyCompT(string Id, CdAssemblyCompT data)
         {
-            return cdAssemblyCompTRepository.Update(Id, jsonData);
+            return cdAssemblyCompTRepository.Update(Id, data);
         }
         public bool DeleteCdAssemblyComp(string Id)
         {
@@ -200,14 +196,14 @@ namespace BigData
             return cdAssemblyDetailTRepository.GetRows();
         }
 
-        public bool CreateCdAssemblyDetailT(string jsonData)
+        public bool CreateCdAssemblyDetailT(CdAssemblyDetailT data)
         {
-            return cdAssemblyDetailTRepository.Create(jsonData);
+            return cdAssemblyDetailTRepository.Create(data);
         }
 
-        public bool UpdateCdAssemblyDtailT(string Id, string jsonData)
+        public bool UpdateCdAssemblyDtailT(string Id, CdAssemblyDetailT data)
         {
-            return cdAssemblyDetailTRepository.Update(Id, jsonData);
+            return cdAssemblyDetailTRepository.Update(Id, data);
         }
 
         public bool DeleteCdAssemblyDetailT(string Id)
@@ -222,14 +218,14 @@ namespace BigData
             return cdAssemblyTRepository.GetRows();
         }
 
-        public bool CreateCdAssemblyT(string jsonData)
+        public bool CreateCdAssemblyT(CdAssemblyT data)
         {
-            return cdAssemblyTRepository.Create(jsonData);
+            return cdAssemblyTRepository.Create(data);
         }
 
-        public bool UpdateCdAssemblyT(string Id, string jsonData)
+        public bool UpdateCdAssemblyT(string Id, CdAssemblyT data)
         {
-            return cdAssemblyTRepository.Update(Id, jsonData);
+            return cdAssemblyTRepository.Update(Id, data);
         }
 
         public bool DeleteCdAssemblyT(string Id)
@@ -243,9 +239,9 @@ namespace BigData
         {
             return cdBhaCompBitTRepository.GetRows();
         }
-        public bool CreateCdBhaBitT(string jsonData)
+        public bool CreateCdBhaBitT(CdBhaCompBitT data)
         {
-            return cdBhaCompBitTRepository.Create(jsonData);
+            return cdBhaCompBitTRepository.Create(data);
         }
         #endregion
 
@@ -255,14 +251,14 @@ namespace BigData
             return cdCementFluidScheduleTRepository.GetRows();
         }
 
-        public bool CreateCdCementFluidSchedule(string jsonData)
+        public bool CreateCdCementFluidSchedule(CdCementFluidScheduleT data)
         {
-            return cdCementFluidScheduleTRepository.Create(jsonData);
+            return cdCementFluidScheduleTRepository.Create(data);
         }
 
-        public bool UpdateCdCementFluidSchedule(string Id, string jsonData)
+        public bool UpdateCdCementFluidSchedule(string Id, CdCementFluidScheduleT data)
         {
-            return cdCementFluidScheduleTRepository.Update(Id, jsonData);
+            return cdCementFluidScheduleTRepository.Update(Id, data);
         }
 
         public bool DeleteCdCementFluidSchedule(string Id)
@@ -277,14 +273,14 @@ namespace BigData
             return cdCementFluidTRepository.GetRows();
         }
 
-        public bool CreateCdCementFluidT(string jsonData)
+        public bool CreateCdCementFluidT(CdCementFluidT data)
         {
-            return cdCementFluidTRepository.Create(jsonData);
+            return cdCementFluidTRepository.Create(data);
         }
 
-        public bool UpdateCdCementFluidT(string Id, string jsonData)
+        public bool UpdateCdCementFluidT(string Id, CdCementFluidT data)
         {
-            return cdCementFluidTRepository.Update(Id, jsonData);
+            return cdCementFluidTRepository.Update(Id, data);
         }
 
         public bool DeleteCdCementFluidT(string Id)
@@ -299,14 +295,14 @@ namespace BigData
             return cdCementJobTRepository.GetRows();
         }
 
-        public bool CreateCdCementJobT(string jsonData)
+        public bool CreateCdCementJobT(CdCementJobT data)
         {
-            return cdCementJobTRepository.Create(jsonData);
+            return cdCementJobTRepository.Create(data);
         }
 
-        public bool UpdateCdCementJobT(string Id, string jsonData)
+        public bool UpdateCdCementJobT(string Id, CdCementJobT data)
         {
-            return cdCementJobTRepository.Update(Id, jsonData);
+            return cdCementJobTRepository.Update(Id, data);
         }
 
         public bool DeleteCdCementJobT(string Id)
@@ -321,14 +317,14 @@ namespace BigData
             return cdCementPlugStatusTRepository.GetRows();
         }
 
-        public bool CreateCdCementStatusT(string jsonData)
+        public bool CreateCdCementStatusT(CdCementPlugStatusT data)
         {
-            return cdCementPlugStatusTRepository.Create(jsonData);
+            return cdCementPlugStatusTRepository.Create(data);
         }
 
-        public bool UpdateCdCementStatusT(string Id, string jsonData)
+        public bool UpdateCdCementStatusT(string Id, CdCementPlugStatusT data)
         {
-            return cdCementPlugStatusTRepository.Update(Id, jsonData);
+            return cdCementPlugStatusTRepository.Update(Id, data);
         }
 
         public bool DeleteCdCementStatusT(string Id)
@@ -343,14 +339,14 @@ namespace BigData
             return cdCementStageTRepository.GetRows();
         }
 
-        public bool CreateCdCementStageT(string jsonData)
+        public bool CreateCdCementStageT(CdCementStageT data)
         {
-            return cdCementStageTRepository.Create(jsonData);
+            return cdCementStageTRepository.Create(data);
         }
 
-        public bool UpdateCdCementStageT(string Id, string jsonData)
+        public bool UpdateCdCementStageT(string Id, CdCementStageT data)
         {
-            return cdCementStageTRepository.Update(Id, jsonData);
+            return cdCementStageTRepository.Update(Id, data);
         }
 
         public bool DeleteCdCementStageT(string Id)
@@ -365,14 +361,14 @@ namespace BigData
             return cdDatumTRepository.GetRows();
         }
 
-        public bool CreateCdDatumT(string jsonData)
+        public bool CreateCdDatumT(CdDatumT data)
         {
-            return cdDatumTRepository.Create(jsonData);
+            return cdDatumTRepository.Create(data);
         }
 
-        public bool UpdateCdDatumT(string Id, string jsonData)
+        public bool UpdateCdDatumT(string Id, CdDatumT data)
         {
-            return cdDatumTRepository.Update(Id, jsonData);
+            return cdDatumTRepository.Update(Id, data);
         }
 
         public bool DeleteCdDatumT(string Id)
@@ -387,14 +383,14 @@ namespace BigData
             return cdDefinitiveSurveyHeaderTRepository.GetRows();
         }
 
-        public bool CreateCdDefinitiveSurveyHeaderT(string jsonData)
+        public bool CreateCdDefinitiveSurveyHeaderT(CdDefinitiveSurveyHeaderT data)
         {
-            return cdDefinitiveSurveyHeaderTRepository.Create(jsonData);
+            return cdDefinitiveSurveyHeaderTRepository.Create(data);
         }
 
-        public bool UpdateCdDefinitiveSurveyHeaderT(string Id, string jsonData)
+        public bool UpdateCdDefinitiveSurveyHeaderT(string Id, CdDefinitiveSurveyHeaderT data)
         {
-            return cdDefinitiveSurveyHeaderTRepository.Update(Id, jsonData);
+            return cdDefinitiveSurveyHeaderTRepository.Update(Id, data);
         }
 
         public bool DeleteCdDefinitiveSurveyHeaderT(string Id)
@@ -409,14 +405,14 @@ namespace BigData
             return cdFluidTRepository.GetRows();
         }
 
-        public bool CreateCdFluidT(string jsonData)
+        public bool CreateCdFluidT(CdFluidT data)
         {
-            return cdFluidTRepository.Create(jsonData);
+            return cdFluidTRepository.Create(data);
         }
 
-        public bool UpdateCdFluidT(string Id, string jsonData)
+        public bool UpdateCdFluidT(string Id, CdFluidT data)
         {
-            return cdFluidTRepository.Update(Id, jsonData);
+            return cdFluidTRepository.Update(Id, data);
         }
 
         public bool DeleteCdFluidT(string Id)
@@ -431,14 +427,14 @@ namespace BigData
             return cdHoleSectGroupTRepository.GetRows();
         }
 
-        public bool CreateCdHoleSectGroupT(string jsonData)
+        public bool CreateCdHoleSectGroupT(CdHoleSectGroupT data)
         {
-            return cdHoleSectGroupTRepository.Create(jsonData);
+            return cdHoleSectGroupTRepository.Create(data);
         }
 
-        public bool UpdateCdHoleSectGroupT(string Id, string jsonData)
+        public bool UpdateCdHoleSectGroupT(string Id, CdHoleSectGroupT data)
         {
-            return cdHoleSectGroupTRepository.Update(Id, jsonData);
+            return cdHoleSectGroupTRepository.Update(Id, data);
         }
 
         public bool DeleteCdHoleSectGroupT(string Id)
@@ -453,14 +449,14 @@ namespace BigData
             return cdHoleSectTRepository.GetRows();
         }
 
-        public bool CreateCdHoleSectT(string jsonData)
+        public bool CreateCdHoleSectT(CdHoleSectT data)
         {
-            return cdHoleSectTRepository.Create(jsonData);
+            return cdHoleSectTRepository.Create(data);
         }
 
-        public bool UpdateCdHoleSectT(string Id, string jsonData)
+        public bool UpdateCdHoleSectT(string Id, CdHoleSectT data)
         {
-            return cdHoleSectTRepository.Update(Id, jsonData);
+            return cdHoleSectTRepository.Update(Id, data);
         }
 
         public bool DeleteCdHoleSectT(string Id)
@@ -475,14 +471,14 @@ namespace BigData
             return cdPerforateTRepository.GetRows();
         }
 
-        public bool CreateCdPerforateT(string jsonData)
+        public bool CreateCdPerforateT(CdPerforateT data)
         {
-            return cdPerforateTRepository.Create(jsonData);
+            return cdPerforateTRepository.Create(data);
         }
 
-        public bool UpdateCdPerforateT(string Id, string jsonData)
+        public bool UpdateCdPerforateT(string Id, CdPerforateT data)
         {
-            return cdPerforateTRepository.Update(Id, jsonData);
+            return cdPerforateTRepository.Update(Id, data);
         }
 
         public bool DeleteCdPerforateT(string Id)
@@ -497,14 +493,14 @@ namespace BigData
             return cdPolicyRepository.GetRows();
         }
 
-        public bool CreateCdPolicy(string jsonData)
+        public bool CreateCdPolicy(CdPolicy data)
         {
-            return cdPolicyRepository.Create(jsonData);
+            return cdPolicyRepository.Create(data);
         }
 
-        public bool UpdateCdPolicy(string Id, string jsonData)
+        public bool UpdateCdPolicy(string Id, CdPolicy data)
         {
-            return cdPolicyRepository.Update(Id, jsonData);
+            return cdPolicyRepository.Update(Id, data);
         }
 
         public bool DeleteCdPolicy(string Id)
@@ -519,14 +515,14 @@ namespace BigData
             return cdProjectSourceRepository.GetRows();
         }
 
-        public bool CreateCdProjectSource(string jsonData)
+        public bool CreateCdProjectSource(CdProjectSource data)
         {
-            return cdProjectSourceRepository.Create(jsonData);
+            return cdProjectSourceRepository.Create(data);
         }
 
-        public bool UpdateCdProjectSource(string Id, string jsonData)
+        public bool UpdateCdProjectSource(string Id, CdProjectSource data)
         {
-            return cdProjectSourceRepository.Update(Id, jsonData);
+            return cdProjectSourceRepository.Update(Id, data);
         }
 
         public bool DeleteCdProjectSource(string Id)
@@ -541,14 +537,14 @@ namespace BigData
             return cdRigRepository.GetRows();
         }
 
-        public bool CreateCdRig(string jsonData)
+        public bool CreateCdRig(CdRig data)
         {
-            return cdRigRepository.Create(jsonData);
+            return cdRigRepository.Create(data);
         }
 
-        public bool UpdateCdRig(string Id, string jsonData)
+        public bool UpdateCdRig(string Id, CdRig data)
         {
-            return cdRigRepository.Update(Id, jsonData);
+            return cdRigRepository.Update(Id, data);
         }
 
         public bool DeleteCdRig(string Id)
@@ -563,14 +559,14 @@ namespace BigData
             return cdRigAnchorRepository.GetRows();
         }
 
-        public bool CreateCdRigAnchor(string jsonData)
+        public bool CreateCdRigAnchor(CdRigAnchor data)
         {
-            return cdRigAnchorRepository.Create(jsonData);
+            return cdRigAnchorRepository.Create(data);
         }
 
-        public bool UpdateCdRigAnchor(string Id, string jsonData)
+        public bool UpdateCdRigAnchor(string Id, CdRigAnchor data)
         {
-            return cdRigAnchorRepository.Update(Id, jsonData);
+            return cdRigAnchorRepository.Update(Id, data);
         }
 
         public bool DeleteCdRigAnchor(string Id)
@@ -585,14 +581,14 @@ namespace BigData
             return cdRigCentrifugeRepository.GetRows();
         }
 
-        public bool CreateCdRigCentrifuge(string jsonData)
+        public bool CreateCdRigCentrifuge(CdRigCentrifuge data)
         {
-            return cdRigCentrifugeRepository.Create(jsonData);
+            return cdRigCentrifugeRepository.Create(data);
         }
 
-        public bool UpdateCdRigCentrifuge(string Id, string jsonData)
+        public bool UpdateCdRigCentrifuge(string Id, CdRigCentrifuge data)
         {
-            return cdRigCentrifugeRepository.Update(Id, jsonData);
+            return cdRigCentrifugeRepository.Update(Id, data);
         }
 
         public bool DeleteCdRigCentrifuge(string Id)
@@ -607,14 +603,14 @@ namespace BigData
             return cdRigHydrocloneRepository.GetRows();
         }
 
-        public bool CreateCdRigHydroclone(string jsonData)
+        public bool CreateCdRigHydroclone(CdRigHydroclone data)
         {
-            return cdRigHydrocloneRepository.Create(jsonData);
+            return cdRigHydrocloneRepository.Create(data);
         }
 
-        public bool UpdateCdRigHydroclone(string Id, string jsonData)
+        public bool UpdateCdRigHydroclone(string Id, CdRigHydroclone data)
         {
-            return cdRigHydrocloneRepository.Update(Id, jsonData);
+            return cdRigHydrocloneRepository.Update(Id, data);
         }
 
         public bool DeleteCdRigHydroclone(string Id)
@@ -629,14 +625,14 @@ namespace BigData
             return cdRigPumpRepository.GetRows();
         }
 
-        public bool CreateCdRigPump(string jsonData)
+        public bool CreateCdRigPump(CdRigPump data)
         {
-            return cdRigPumpRepository.Create(jsonData);
+            return cdRigPumpRepository.Create(data);
         }
 
-        public bool UpdateCdRigPump(string Id, string jsonData)
+        public bool UpdateCdRigPump(string Id, CdRigPump data)
         {
-            return cdRigPumpRepository.Update(Id, jsonData);
+            return cdRigPumpRepository.Update(Id, data);
         }
 
         public bool DeleteCdRigPump(string Id)
@@ -651,14 +647,14 @@ namespace BigData
             return cdSiteSourceRepository.GetRows();
         }
 
-        public bool CreateCdSiteSource(string jsonData)
+        public bool CreateCdSiteSource(CdSiteSource data)
         {
-            return cdSiteSourceRepository.Create(jsonData);
+            return cdSiteSourceRepository.Create(data);
         }
 
-        public bool UpdateCdSiteSource(string Id, string jsonData)
+        public bool UpdateCdSiteSource(string Id, CdSiteSource data)
         {
-            return cdSiteSourceRepository.Update(Id, jsonData);
+            return cdSiteSourceRepository.Update(Id, data);
         }
 
         public bool DeleteCdSiteSource(string Id)
@@ -673,14 +669,14 @@ namespace BigData
             return cdSurveyHeaderTRepository.GetRows();
         }
 
-        public bool CreateCdSurveyHeaderT(string jsonData)
+        public bool CreateCdSurveyHeaderT(CdSurveyHeaderT data)
         {
-            return cdSurveyHeaderTRepository.Create(jsonData);
+            return cdSurveyHeaderTRepository.Create(data);
         }
 
-        public bool UpdateCdSurveyHeaderT(string Id, string jsonData)
+        public bool UpdateCdSurveyHeaderT(string Id, CdSurveyHeaderT data)
         {
-            return cdSurveyHeaderTRepository.Update(Id, jsonData);
+            return cdSurveyHeaderTRepository.Update(Id, data);
         }
 
         public bool DeleteCdSurveyHeaderT(string Id)
@@ -695,14 +691,14 @@ namespace BigData
             return cdSurveyStationTRepository.GetRows();
         }
 
-        public bool CreateCdSurveyStationT(string jsonData)
+        public bool CreateCdSurveyStationT(CdSurveyStationT data)
         {
-            return cdSurveyStationTRepository.Create(jsonData);
+            return cdSurveyStationTRepository.Create(data);
         }
 
-        public bool UpdateCdSurveyStationT(string Id, string jsonData)
+        public bool UpdateCdSurveyStationT(string Id, CdSurveyStationT data)
         {
-            return cdSurveyStationTRepository.Update(Id, jsonData);
+            return cdSurveyStationTRepository.Update(Id, data);
         }
 
         public bool DeleteCdSurveyStationT(string Id)
@@ -717,14 +713,14 @@ namespace BigData
             return cdVgMeterTRepository.GetRows();
         }
 
-        public bool CreateCdVgMeterT(string jsonData)
+        public bool CreateCdVgMeterT(CdVgMeterT data)
         {
-            return cdVgMeterTRepository.Create(jsonData);
+            return cdVgMeterTRepository.Create(data);
         }
 
-        public bool UpdateCdVgMeterT(string Id, string jsonData)
+        public bool UpdateCdVgMeterT(string Id, CdVgMeterT data)
         {
-            return cdVgMeterTRepository.Update(Id, jsonData);
+            return cdVgMeterTRepository.Update(Id, data);
         }
 
         public bool DeleteCdVgMeterT(string Id)
@@ -739,14 +735,14 @@ namespace BigData
             return cdWellSourceRepository.GetRows();
         }
 
-        public bool CreateCdWellSource(string jsonData)
+        public bool CreateCdWellSource(CdWellSource data)
         {
-            return cdWellSourceRepository.Create(jsonData);
+            return cdWellSourceRepository.Create(data);
         }
 
-        public bool UpdateCdWellSource(string Id, string jsonData)
+        public bool UpdateCdWellSource(string Id, CdWellSource data)
         {
-            return cdWellSourceRepository.Update(Id, jsonData);
+            return cdWellSourceRepository.Update(Id, data);
         }
 
         public bool DeleteCdWellSource(string Id)
@@ -761,14 +757,14 @@ namespace BigData
             return cdWellStatusTRepository.GetRows();
         }
 
-        public bool CreateCdWellStatusT(string jsonData)
+        public bool CreateCdWellStatusT(CdWellStatusT data)
         {
-            return cdWellStatusTRepository.Create(jsonData);
+            return cdWellStatusTRepository.Create(data);
         }
 
-        public bool UpdateCdWellStatusT(string Id, string jsonData)
+        public bool UpdateCdWellStatusT(string Id, CdWellStatusT data)
         {
-            return cdWellStatusTRepository.Update(Id, jsonData);
+            return cdWellStatusTRepository.Update(Id, data);
         }
 
         public bool DeleteCdWellStatusT(string Id)
@@ -783,14 +779,14 @@ namespace BigData
             return cdWellboreFormationTRepository.GetRows();
         }
 
-        public bool CreateCdWellboreFormationT(string jsonData)
+        public bool CreateCdWellboreFormationT(CdWellboreFormationT data)
         {
-            return cdWellboreFormationTRepository.Create(jsonData);
+            return cdWellboreFormationTRepository.Create(data);
         }
 
-        public bool UpdateCdWellboreFormationT(string Id, string jsonData)
+        public bool UpdateCdWellboreFormationT(string Id, CdWellboreFormationT data)
         {
-            return cdWellboreFormationTRepository.Update(Id, jsonData);
+            return cdWellboreFormationTRepository.Update(Id, data);
         }
 
         public bool DeleteCdWellboreFormationT(string Id)
@@ -805,14 +801,14 @@ namespace BigData
             return cdWellboreTRepository.GetRows();
         }
 
-        public bool CreateCdWellboreT(string jsonData)
+        public bool CreateCdWellboreT(CdWellboreT data)
         {
-            return cdWellboreTRepository.Create(jsonData);
+            return cdWellboreTRepository.Create(data);
         }
 
-        public bool UpdateCdWellboreT(string Id, string jsonData)
+        public bool UpdateCdWellboreT(string Id, CdWellboreT data)
         {
-            return cdWellboreTRepository.Update(Id, jsonData);
+            return cdWellboreTRepository.Update(Id, data);
         }
 
         public bool DeleteCdWellboreT(string Id)
@@ -827,14 +823,14 @@ namespace BigData
             return dmActivityTRepository.GetRows();
         }
 
-        public bool CreateDmActivityT(string jsonData)
+        public bool CreateDmActivityT(DmActivityT data)
         {
-            return dmActivityTRepository.Create(jsonData);
+            return dmActivityTRepository.Create(data);
         }
 
-        public bool UpdateDmActivityT(string Id, string jsonData)
+        public bool UpdateDmActivityT(string Id, DmActivityT data)
         {
-            return dmActivityTRepository.Update(Id, jsonData);
+            return dmActivityTRepository.Update(Id, data);
         }
 
         public bool DeleteDmActivityT(string Id)
@@ -849,14 +845,14 @@ namespace BigData
             return dmAfeRepository.GetRows();
         }
 
-        public bool CreateDmAfe(string jsonData)
+        public bool CreateDmAfe(DmAfe data)
         {
-            return dmAfeRepository.Create(jsonData);
+            return dmAfeRepository.Create(data);
         }
 
-        public bool UpdateDmAfe(string Id, string jsonData)
+        public bool UpdateDmAfe(string Id, DmAfe data)
         {
-            return dmAfeRepository.Update(Id, jsonData);
+            return dmAfeRepository.Update(Id, data);
         }
 
         public bool DeleteDmAfe(string Id)
@@ -871,14 +867,14 @@ namespace BigData
             return dmAfeSuppRepository.GetRows();
         }
 
-        public bool CreateDmAfeSupp(string jsonData)
+        public bool CreateDmAfeSupp(DmAfeSupp data)
         {
-            return dmAfeSuppRepository.Create(jsonData);
+            return dmAfeSuppRepository.Create(data);
         }
 
-        public bool UpdateDmAfeSupp(string Id, string jsonData)
+        public bool UpdateDmAfeSupp(string Id, DmAfeSupp data)
         {
-            return dmAfeSuppRepository.Update(Id, jsonData);
+            return dmAfeSuppRepository.Update(Id, data);
         }
 
         public bool DeleteDmAfeSupp(string Id)
@@ -893,14 +889,14 @@ namespace BigData
             return dmAnchorOpTRepository.GetRows();
         }
 
-        public bool CreateDmAnchorOpT(string jsonData)
+        public bool CreateDmAnchorOpT(DmAnchorOpT data)
         {
-            return dmAnchorOpTRepository.Create(jsonData);
+            return dmAnchorOpTRepository.Create(data);
         }
 
-        public bool UpdateDmAnchorOpT(string Id, string jsonData)
+        public bool UpdateDmAnchorOpT(string Id, DmAnchorOpT data)
         {
-            return dmAnchorOpTRepository.Update(Id, jsonData);
+            return dmAnchorOpTRepository.Update(Id, data);
         }
 
         public bool Delete(string Id)
@@ -915,14 +911,14 @@ namespace BigData
             return dmBhaOpTRepository.GetRows();
         }
 
-        public bool CreateDmBhaOpT(string jsonData)
+        public bool CreateDmBhaOpT(DmBhaOpT data)
         {
-            return dmBhaOpTRepository.Create(jsonData);
+            return dmBhaOpTRepository.Create(data);
         }
 
-        public bool UpdateDmBhaOpT(string Id, string jsonData)
+        public bool UpdateDmBhaOpT(string Id, DmBhaOpT data)
         {
-            return dmBhaOpTRepository.Update(Id, jsonData);
+            return dmBhaOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmBhaOpT(string Id)
@@ -937,14 +933,14 @@ namespace BigData
             return dmBhaRunTRepository.GetRows();
         }
 
-        public bool CreateDmBhaRunT(string jsonData)
+        public bool CreateDmBhaRunT(DmBhaRunT data)
         {
-            return dmBhaRunTRepository.Create(jsonData);
+            return dmBhaRunTRepository.Create(data);
         }
 
-        public bool UpdateDmBhaRunT(string Id, string jsonData)
+        public bool UpdateDmBhaRunT(string Id, DmBhaRunT data)
         {
-            return dmBhaRunTRepository.Update(Id, jsonData);
+            return dmBhaRunTRepository.Update(Id, data);
         }
 
         public bool DeleteDmBhaRunT(string Id)
@@ -959,14 +955,14 @@ namespace BigData
             return dmBitOpTRepository.GetRows();
         }
 
-        public bool CreateDmBitOpT(string jsonData)
+        public bool CreateDmBitOpT(DmBitOpT data)
         {
-            return dmBitOpTRepository.Create(jsonData);
+            return dmBitOpTRepository.Create(data);
         }
 
-        public bool UpdateDmBitOpT(string Id, string jsonData)
+        public bool UpdateDmBitOpT(string Id, DmBitOpT data)
         {
-            return dmBitOpTRepository.Update(Id, jsonData);
+            return dmBitOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmBitOpT(string Id)
@@ -981,14 +977,14 @@ namespace BigData
             return dmBulkTRepository.GetRows();
         }
 
-        public bool CreateDmBulkT(string jsonData)
+        public bool CreateDmBulkT(DmBulkT data)
         {
-            return dmBulkTRepository.Create(jsonData);
+            return dmBulkTRepository.Create(data);
         }
 
-        public bool UpdateDmBulkT(string Id, string jsonData)
+        public bool UpdateDmBulkT(string Id, DmBulkT data)
         {
-            return dmBulkTRepository.Update(Id, jsonData);
+            return dmBulkTRepository.Update(Id, data);
         }
 
         public bool DeleteDmBulkT(string Id)
@@ -1003,14 +999,14 @@ namespace BigData
             return dmBulkTranTRepository.GetRows();
         }
 
-        public bool CreateDmBulkTranT(string jsonData)
+        public bool CreateDmBulkTranT(DmBulkTranT data)
         {
-            return dmBulkTranTRepository.Create(jsonData);
+            return dmBulkTranTRepository.Create(data);
         }
 
-        public bool UpdateDmBulkTranT(string Id, string jsonData)
+        public bool UpdateDmBulkTranT(string Id, DmBulkTranT data)
         {
-            return dmBulkTranTRepository.Update(Id, jsonData);
+            return dmBulkTranTRepository.Update(Id, data);
         }
 
         public bool DeleteDmBulkTranT(string Id)
@@ -1025,14 +1021,14 @@ namespace BigData
             return dmCentrifugeOpTRepository.GetRows();
         }
 
-        public bool CreateDmCentrifugeOpT(string jsonData)
+        public bool CreateDmCentrifugeOpT(DmCentrifugeOpT data)
         {
-            return dmCentrifugeOpTRepository.Create(jsonData);
+            return dmCentrifugeOpTRepository.Create(data);
         }
 
-        public bool UpdateDmCentrifugeOpT(string Id, string jsonData)
+        public bool UpdateDmCentrifugeOpT(string Id, DmCentrifugeOpT data)
         {
-            return dmCentrifugeOpTRepository.Update(Id, jsonData);
+            return dmCentrifugeOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmCentrifugeOpT(string Id)
@@ -1047,14 +1043,14 @@ namespace BigData
             return dmCompanyDailyTRepository.GetRows();
         }
 
-        public bool CreateDmCompanyDailyT(string jsonData)
+        public bool CreateDmCompanyDailyT(DmCompanyDailyT data)
         {
-            return dmCompanyDailyTRepository.Create(jsonData);
+            return dmCompanyDailyTRepository.Create(data);
         }
 
-        public bool UpdateDmCompanyDailyT(string Id, string jsonData)
+        public bool UpdateDmCompanyDailyT(string Id, DmCompanyDailyT data)
         {
-            return dmCompanyDailyTRepository.Update(Id, jsonData);
+            return dmCompanyDailyTRepository.Update(Id, data);
         }
 
         public bool DeleteDmCompanyDailyT(string Id)
@@ -1069,14 +1065,14 @@ namespace BigData
             return dmCompanyTRepository.GetRows();
         }
 
-        public bool CreateDmCompanyT(string jsonData)
+        public bool CreateDmCompanyT(DmCompanyT data)
         {
-            return dmCompanyTRepository.Create(jsonData);
+            return dmCompanyTRepository.Create(data);
         }
 
-        public bool UpdateDmCompanyT(string Id, string jsonData)
+        public bool UpdateDmCompanyT(string Id, DmCompanyT data)
         {
-            return dmCompanyTRepository.Update(Id, jsonData);
+            return dmCompanyTRepository.Update(Id, data);
         }
 
         public bool DeleteDmCompanyT(string Id)
@@ -1091,14 +1087,14 @@ namespace BigData
             return dmCrCleanupTRepository.GetRows();
         }
 
-        public bool CreateDmCrCleanupT(string jsonData)
+        public bool CreateDmCrCleanupT(DmCrCleanupT data)
         {
-            return dmCrCleanupTRepository.Create(jsonData);
+            return dmCrCleanupTRepository.Create(data);
         }
 
-        public bool UpdateDmCrCleanupT(string Id, string jsonData)
+        public bool UpdateDmCrCleanupT(string Id, DmCrCleanupT data)
         {
-            return dmCrCleanupTRepository.Update(Id, jsonData);
+            return dmCrCleanupTRepository.Update(Id, data);
         }
 
         public bool DeleteDmCrCleanupT(string Id)
@@ -1113,14 +1109,14 @@ namespace BigData
             return dmCrMudAdditiveTRepository.GetRows();
         }
 
-        public bool CreateDmCrMudAdditiveT(string jsonData)
+        public bool CreateDmCrMudAdditiveT(DmCrMudAdditiveT data)
         {
-            return dmCrMudAdditiveTRepository.Create(jsonData);
+            return dmCrMudAdditiveTRepository.Create(data);
         }
 
-        public bool UpdateDmCrMudAdditiveT(string Id, string jsonData)
+        public bool UpdateDmCrMudAdditiveT(string Id, DmCrMudAdditiveT data)
         {
-            return dmCrMudAdditiveTRepository.Update(Id, jsonData);
+            return dmCrMudAdditiveTRepository.Update(Id, data);
         }
 
         public bool DeleteDmCrMudAdditiveT(string Id)
@@ -1135,14 +1131,14 @@ namespace BigData
             return dmDailyDitchMagnetTRepository.GetRows();
         }
 
-        public bool CreateDmDailyDitchMagnetT(string jsonData)
+        public bool CreateDmDailyDitchMagnetT(DmDailyDitchMagnetT data)
         {
-            return dmDailyDitchMagnetTRepository.Create(jsonData);
+            return dmDailyDitchMagnetTRepository.Create(data);
         }
 
-        public bool UpdateDmDailyDitchMagnetT(string Id, string jsonData)
+        public bool UpdateDmDailyDitchMagnetT(string Id, DmDailyDitchMagnetT data)
         {
-            return dmDailyDitchMagnetTRepository.Update(Id, jsonData);
+            return dmDailyDitchMagnetTRepository.Update(Id, data);
         }
 
         public bool DeleteDmDailyDitchMagnetT(string Id)
@@ -1157,14 +1153,14 @@ namespace BigData
             return dmDailyNotificationTRepository.GetRows();
         }
 
-        public bool CreateDmDailyNotificationT(string jsonData)
+        public bool CreateDmDailyNotificationT(DmDailyNotificationT data)
         {
-            return dmDailyNotificationTRepository.Create(jsonData);
+            return dmDailyNotificationTRepository.Create(data);
         }
 
-        public bool UdateDmDailyNotificationT(string Id, string jsonData)
+        public bool UdateDmDailyNotificationT(string Id, DmDailyNotificationT data)
         {
-            return dmDailyNotificationTRepository.Update(Id, jsonData);
+            return dmDailyNotificationTRepository.Update(Id, data);
         }
 
         public bool DeleteDmDailyNotificationT(string Id)
@@ -1179,14 +1175,14 @@ namespace BigData
             return dmDailyTRepository.GetRows();
         }
 
-        public bool CreateDmDailyT(string jsonData)
+        public bool CreateDmDailyT(DmDailyT data)
         {
-            return dmDailyTRepository.Create(jsonData);
+            return dmDailyTRepository.Create(data);
         }
 
-        public bool UpdateDailyT(string Id, string jsonData)
+        public bool UpdateDailyT(string Id, DmDailyT data)
         {
-            return dmDailyTRepository.Update(Id, jsonData);
+            return dmDailyTRepository.Update(Id, data);
         }
 
         public bool DeleteDailyT(string Id)
@@ -1201,14 +1197,14 @@ namespace BigData
             return dmEnvironmentalTRepository.GetRows();
         }
 
-        public bool CreateDmEnvironmentalT(string jsonData)
+        public bool CreateDmEnvironmentalT(DmEnvironmentalT data)
         {
-            return dmEnvironmentalTRepository.Create(jsonData);
+            return dmEnvironmentalTRepository.Create(data);
         }
 
-        public bool UpdateDmEnvironmentalT(string Id, string jsonData)
+        public bool UpdateDmEnvironmentalT(string Id, DmEnvironmentalT data)
         {
-            return dmEnvironmentalTRepository.Update(Id, jsonData);
+            return dmEnvironmentalTRepository.Update(Id, data);
         }
 
         public bool DeleteDmEnvironmentalT(string Id)
@@ -1223,14 +1219,14 @@ namespace BigData
             return dmEventTRepository.GetRows();
         }
 
-        public bool CreateDmEventT(string jsonData)
+        public bool CreateDmEventT(DmEventT data)
         {
-            return dmEventTRepository.Create(jsonData);
+            return dmEventTRepository.Create(data);
         }
 
-        public bool UpdateDmEventT(string Id, string jsonData)
+        public bool UpdateDmEventT(string Id, DmEventT data)
         {
-            return dmEventTRepository.Update(Id, jsonData);
+            return dmEventTRepository.Update(Id, data);
         }
 
         public bool DeleteDmEventT(string Id)
@@ -1245,14 +1241,14 @@ namespace BigData
             return dmHydrocloneOpTRepository.GetRows();
         }
 
-        public bool CreateDmHydrocloneOpT(string jsonData)
+        public bool CreateDmHydrocloneOpT(DmHydrocloneOpT data)
         {
-            return dmHydrocloneOpTRepository.Create(jsonData);
+            return dmHydrocloneOpTRepository.Create(data);
         }
 
-        public bool UpdateDmHydrocloneOpT(string Id, string jsonData)
+        public bool UpdateDmHydrocloneOpT(string Id, DmHydrocloneOpT data)
         {
-            return dmHydrocloneOpTRepository.Update(Id, jsonData);
+            return dmHydrocloneOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmHydrocloneOpT(string Id)
@@ -1267,14 +1263,14 @@ namespace BigData
             return dmMudProductTRepository.GetRows();
         }
 
-        public bool CreateDmMudProduct(string jsonData)
+        public bool CreateDmMudProduct(DmMudProductT data)
         {
-            return dmMudProductTRepository.Create(jsonData);
+            return dmMudProductTRepository.Create(data);
         }
 
-        public bool UpdateDmMudProduct(string Id, string jsonData)
+        public bool UpdateDmMudProduct(string Id, DmMudProductT data)
         {
-            return dmMudProductTRepository.Update(Id, jsonData);
+            return dmMudProductTRepository.Update(Id, data);
         }
 
         public bool DeleteDmMudProductT(string Id)
@@ -1289,14 +1285,14 @@ namespace BigData
             return dmMudProductTranTRepository.GetRows();
         }
 
-        public bool CreateDmMudProductTranT(string jsonData)
+        public bool CreateDmMudProductTranT(DmMudProductTranT data)
         {
-            return dmMudProductTranTRepository.Create(jsonData);
+            return dmMudProductTranTRepository.Create(data);
         }
 
-        public bool UpdateDmMudProductTranT(string Id, string jsonData)
+        public bool UpdateDmMudProductTranT(string Id, DmMudProductTranT data)
         {
-            return dmMudProductTranTRepository.Update(Id, jsonData);
+            return dmMudProductTranTRepository.Update(Id, data);
         }
 
         public bool DeleteDmMudProductTranT(string Id)
@@ -1311,14 +1307,14 @@ namespace BigData
             return dmMudVolumeTRepository.GetRows();
         }
 
-        public bool CreateDmMudVolumeT(string jsonData)
+        public bool CreateDmMudVolumeT(DmMudVolumeT data)
         {
-            return dmMudVolumeTRepository.Create(jsonData);
+            return dmMudVolumeTRepository.Create(data);
         }
 
-        public bool UpdateDmMudVolumeT(string Id, string jsonData)
+        public bool UpdateDmMudVolumeT(string Id, DmMudVolumeT data)
         {
-            return dmMudVolumeTRepository.Update(Id, jsonData);
+            return dmMudVolumeTRepository.Update(Id, data);
         }
 
         public bool DeleteDmMudVolumeT(string Id)
@@ -1333,14 +1329,14 @@ namespace BigData
             return dmOperEquipFailTRepository.GetRows();
         }
 
-        public bool CreateDmOperEquipFailT(string jsonData)
+        public bool CreateDmOperEquipFailT(DmOperEquipFailT data)
         {
-            return dmOperEquipFailTRepository.Create(jsonData);
+            return dmOperEquipFailTRepository.Create(data);
         }
 
-        public bool UpdateDmOperEquipFailT(string Id, string jsonData)
+        public bool UpdateDmOperEquipFailT(string Id, DmOperEquipFailT data)
         {
-            return dmOperEquipFailTRepository.Update(Id, jsonData);
+            return dmOperEquipFailTRepository.Update(Id, data);
         }
 
         public bool DeleteDmOperEquipFailT(string Id)
@@ -1355,14 +1351,14 @@ namespace BigData
             return dmPersonnelDailyTRepository.GetRows();
         }
 
-        public bool CreateDmPersonnelDailyT(string jsonData)
+        public bool CreateDmPersonnelDailyT(DmPersonnelDailyT data)
         {
-            return dmPersonnelDailyTRepository.Create(jsonData);
+            return dmPersonnelDailyTRepository.Create(data);
         }
 
-        public bool UpdateDmPersonnelDailyT(string Id, string jsonData)
+        public bool UpdateDmPersonnelDailyT(string Id, DmPersonnelDailyT data)
         {
-            return dmPersonnelDailyTRepository.Update(Id, jsonData);
+            return dmPersonnelDailyTRepository.Update(Id, data);
         }
 
         public bool DeleteDmPersonnelDailyT(string Id)
@@ -1377,14 +1373,14 @@ namespace BigData
             return dmPersonnelTRepository.GetRows();
         }
 
-        public bool CreateDmPersonnelT(string jsonData)
+        public bool CreateDmPersonnelT(DmPersonnelT data)
         {
-            return dmPersonnelTRepository.Create(jsonData);
+            return dmPersonnelTRepository.Create(data);
         }
 
-        public bool UpdateDmPersonnelT(string Id, string jsonData)
+        public bool UpdateDmPersonnelT(string Id, DmPersonnelT data)
         {
-            return dmPersonnelTRepository.Update(Id, jsonData);
+            return dmPersonnelTRepository.Update(Id, data);
         }
 
         public bool DeleteDmPersonnelT(string Id)
@@ -1399,14 +1395,14 @@ namespace BigData
             return dmPitOpTRepository.GetRows();
         }
 
-        public bool CreateDmPitOpT(string jsonData)
+        public bool CreateDmPitOpT(DmPitOpT data)
         {
-            return dmPitOpTRepository.Create(jsonData);
+            return dmPitOpTRepository.Create(data);
         }
 
-        public bool UpdateDmPitOpT(string Id, string jsonData)
+        public bool UpdateDmPitOpT(string Id, DmPitOpT data)
         {
-            return dmPitOpTRepository.Update(Id, jsonData);
+            return dmPitOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmPitOpT(string Id)
@@ -1421,14 +1417,14 @@ namespace BigData
             return dmPumpOpTRepository.GetRows();
         }
 
-        public bool CreateDmPumpT(string jsonData)
+        public bool CreateDmPumpT(DmPumpOpT data)
         {
-            return dmPumpOpTRepository.Create(jsonData);
+            return dmPumpOpTRepository.Create(data);
         }
 
-        public bool UpdateDmPumpT(string Id, string jsonData)
+        public bool UpdateDmPumpT(string Id, DmPumpOpT data)
         {
-            return dmPumpOpTRepository.Update(Id, jsonData);
+            return dmPumpOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmPumpT(string Id)
@@ -1443,14 +1439,14 @@ namespace BigData
             return dmRigDecklogTRepository.GetRows();
         }
 
-        public bool CreateDmRigDecklogT(string jsonData)
+        public bool CreateDmRigDecklogT(DmRigDecklogT data)
         {
-            return dmRigDecklogTRepository.Create(jsonData);
+            return dmRigDecklogTRepository.Create(data);
         }
 
-        public bool UpdateDmRigDecklogT(string Id, string jsonData)
+        public bool UpdateDmRigDecklogT(string Id, DmRigDecklogT data)
         {
-            return dmRigDecklogTRepository.Update(Id, jsonData);
+            return dmRigDecklogTRepository.Update(Id, data);
         }
 
         public bool DeleteDmRigDecklogT(string Id)
@@ -1465,14 +1461,14 @@ namespace BigData
             return dmRigOperationRepository.GetRows();
         }
 
-        public bool CreateDmRigOperation(string jsonData)
+        public bool CreateDmRigOperation(DmRigOperation data)
         {
-            return dmRigOperationRepository.Create(jsonData);
+            return dmRigOperationRepository.Create(data);
         }
 
-        public bool UpdateDmRigOperation(string Id, string jsonData)
+        public bool UpdateDmRigOperation(string Id, DmRigOperation data)
         {
-            return dmRigOperationRepository.Update(Id, jsonData);
+            return dmRigOperationRepository.Update(Id, data);
         }
 
         public bool DeleteDmRigOperation(string Id)
@@ -1487,14 +1483,14 @@ namespace BigData
             return dmRiserRepository.GetRows();
         }
 
-        public bool CreateDmRiser(string jsonData)
+        public bool CreateDmRiser(DmRiser data)
         {
-            return dmRiserRepository.Create(jsonData);
+            return dmRiserRepository.Create(data);
         }
 
-        public bool UpdateDmRiser(string Id, string jsonData)
+        public bool UpdateDmRiser(string Id, DmRiser data)
         {
-            return dmRiserRepository.Update(Id, jsonData);
+            return dmRiserRepository.Update(Id, data);
         }
 
         public bool DeleteDmRiser(string Id)
@@ -1509,14 +1505,14 @@ namespace BigData
             return dmRiserOpTRepository.GetRows();
         }
 
-        public bool CreateDmRiserOpT(string jsonData)
+        public bool CreateDmRiserOpT(DmRiserOpT data)
         {
-            return dmRiserOpTRepository.Create(jsonData);
+            return dmRiserOpTRepository.Create(data);
         }
 
-        public bool UpdateDmRiserOpT(string Id, string jsonData)
+        public bool UpdateDmRiserOpT(string Id, DmRiserOpT data)
         {
-            return dmRiserOpTRepository.Update(Id, jsonData);
+            return dmRiserOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmRiserOpT(string Id)
@@ -1531,14 +1527,14 @@ namespace BigData
             return dmSafetyTRepository.GetRows();
         }
 
-        public bool CreateDmSafetyT(string jsonData)
+        public bool CreateDmSafetyT(DmSafetyT data)
         {
-            return dmSafetyTRepository.Create(jsonData);
+            return dmSafetyTRepository.Create(data);
         }
 
-        public bool UpdateDmSafetyT(string Id, string jsonData)
+        public bool UpdateDmSafetyT(string Id, DmSafetyT data)
         {
-            return dmSafetyTRepository.Update(Id, jsonData);
+            return dmSafetyTRepository.Update(Id, data);
         }
 
         public bool DeleteDmSafetyT(string Id)
@@ -1553,14 +1549,14 @@ namespace BigData
             return dmShakerOpTRepository.GetRows();
         }
 
-        public bool CreateDmShakerOpT(string jsonData)
+        public bool CreateDmShakerOpT(DmShakerOpT data)
         {
-            return dmShakerOpTRepository.Create(jsonData);
+            return dmShakerOpTRepository.Create(data);
         }
 
-        public bool UpdateDmShakerOpT(string Id, string jsonData)
+        public bool UpdateDmShakerOpT(string Id, DmShakerOpT data)
         {
-            return dmShakerOpTRepository.Update(Id, jsonData);
+            return dmShakerOpTRepository.Update(Id, data);
         }
 
         public bool DeleteDmShakerOpT(string Id)
@@ -1575,14 +1571,14 @@ namespace BigData
             return dmShakerscreenRepository.GetRows();
         }
 
-        public bool CreateDmShakerscreen(string jsonData)
+        public bool CreateDmShakerscreen(DmShakerscreen data)
         {
-            return dmShakerscreenRepository.Create(jsonData);
+            return dmShakerscreenRepository.Create(data);
         }
 
-        public bool UpdateDmShakerscreen(string Id, string jsonData)
+        public bool UpdateDmShakerscreen(string Id, DmShakerscreen data)
         {
-            return dmShakerscreenRepository.Update(Id, jsonData);
+            return dmShakerscreenRepository.Update(Id, data);
         }
 
         public bool DeleteDmShakerscreen(string Id)
@@ -1597,14 +1593,14 @@ namespace BigData
             return dmSupportVesselDailyTRepository.GetRows();
         }
 
-        public bool CreateDmSupportVesselDailyT(string jsonData)
+        public bool CreateDmSupportVesselDailyT(DmSupportVesselDailyT data)
         {
-            return dmSupportVesselDailyTRepository.Create(jsonData);
+            return dmSupportVesselDailyTRepository.Create(data);
         }
 
-        public bool UpdateDmSupportVesselDailyT(string Id, string jsonData)
+        public bool UpdateDmSupportVesselDailyT(string Id, DmSupportVesselDailyT data)
         {
-            return dmSupportVesselDailyTRepository.Update(Id, jsonData);
+            return dmSupportVesselDailyTRepository.Update(Id, data);
         }
 
         public bool DeleteDmSupportVesselDailyT(string Id)
@@ -1619,14 +1615,14 @@ namespace BigData
             return dmSupportVesselTRepository.GetRows();
         }
 
-        public bool CreateDmSupportVesselT(string jsonData)
+        public bool CreateDmSupportVesselT(DmSupportVesselT data)
         {
-            return dmSupportVesselTRepository.Create(jsonData);
+            return dmSupportVesselTRepository.Create(data);
         }
 
-        public bool UpdateDmSupportVesselT(string Id, string jsonData)
+        public bool UpdateDmSupportVesselT(string Id, DmSupportVesselT data)
         {
-            return dmSupportVesselTRepository.Update(Id, jsonData);
+            return dmSupportVesselTRepository.Update(Id, data);
         }
 
         public bool DeleteDmSupportVesselT(string Id)
@@ -1641,14 +1637,14 @@ namespace BigData
             return dmWeatherCheckTRepository.GetRows();
         }
 
-        public bool CreateDmWeatherCheckT(string jsonData)
+        public bool CreateDmWeatherCheckT(DmWeatherCheckT data)
         {
-            return dmWeatherCheckTRepository.Create(jsonData);
+            return dmWeatherCheckTRepository.Create(data);
         }
 
-        public bool UpdateDmWeatherCheckT(string Id, string jsonData)
+        public bool UpdateDmWeatherCheckT(string Id, DmWeatherCheckT data)
         {
-            return dmWeatherCheckTRepository.Update(Id, jsonData);
+            return dmWeatherCheckTRepository.Update(Id, data);
         }
 
         public bool DeleteDmWeatherCheckT(string Id)
@@ -1663,14 +1659,14 @@ namespace BigData
             return dmWellboreIntegTRepository.GetRows();
         }
 
-        public bool CreateDmWellboreIntegT(string jsonData)
+        public bool CreateDmWellboreIntegT(DmWellboreIntegT data)
         {
-            return dmWellboreIntegTRepository.Create(jsonData);
+            return dmWellboreIntegTRepository.Create(data);
         }
 
-        public bool UpdateDmWellboreIntegT(string Id, string jsonData)
+        public bool UpdateDmWellboreIntegT(string Id, DmWellboreIntegT data)
         {
-            return dmWellboreIntegTRepository.Update(Id, jsonData);
+            return dmWellboreIntegTRepository.Update(Id, data);
         }
 
         public bool DeleteDmWellboreIntegT(string Id)

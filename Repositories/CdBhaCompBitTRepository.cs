@@ -1,9 +1,6 @@
 ﻿using BigData.Models;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BigData.Repositories
 {
@@ -21,10 +18,9 @@ namespace BigData.Repositories
             return dbContext.CdBhaCompBitT.Select(x => x).ToList();
         }
 
-        public bool Create(string jsonData)
+        public bool Create(CdBhaCompBitT data)
         {
-            var model = JsonConvert.DeserializeObject<CdBhaCompBitT>(jsonData);
-            dbContext.CdBhaCompBitT.Add(model);
+            dbContext.CdBhaCompBitT.Add(data);
             return dbContext.SaveChanges() > 0;
         }
     }

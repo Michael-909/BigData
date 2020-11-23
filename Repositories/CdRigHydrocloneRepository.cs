@@ -1,10 +1,7 @@
 ﻿using BigData.Helpers;
 using BigData.Models;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BigData.Repositories
 {
@@ -22,19 +19,18 @@ namespace BigData.Repositories
             return dbContext.CdRigHydroclone.Select(x => x).ToList();
         }
 
-        public bool Create(string jsonData)
+        public bool Create(CdRigHydroclone data)
         {
-            var model = JsonConvert.DeserializeObject<CdRigHydroclone>(jsonData);
-            model.HydrocloneId = NormalHelper.GenerateNormalKey();
-            dbContext.CdRigHydroclone.Add(model);
+            data.HydrocloneId = NormalHelper.GenerateNormalKey();
+            dbContext.CdRigHydroclone.Add(data);
             return dbContext.SaveChanges() > 0;
         }
 
-        public bool Update(string Id, string jsonData)
+        public bool Update(string Id, CdRigHydroclone data)
         {
             var model = dbContext.CdRigHydroclone.SingleOrDefault(x => x.HydrocloneId == Id);
             if (model == null) return false;
-            model = JsonConvert.DeserializeObject<CdRigHydroclone>(jsonData);
+            model = data;
             dbContext.CdRigHydroclone.Update(model);
             return dbContext.SaveChanges() > 0;
         }

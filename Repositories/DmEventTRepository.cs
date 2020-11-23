@@ -1,10 +1,7 @@
 ﻿using BigData.Helpers;
 using BigData.Models;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BigData.Repositories
 {
@@ -22,19 +19,18 @@ namespace BigData.Repositories
             return dbContext.DmEventT.Select(x => x).ToList();
         }
 
-        public bool Create(string jsonData)
+        public bool Create(DmEventT data)
         {
-            var model = JsonConvert.DeserializeObject<DmEventT>(jsonData);
-            model.EventId = NormalHelper.GenerateNormalKey();
-            dbContext.DmEventT.Add(model);
+            data.EventId = NormalHelper.GenerateNormalKey();
+            dbContext.DmEventT.Add(data);
             return dbContext.SaveChanges() > 0;
         }
 
-        public bool Update(string Id, string jsonData)
+        public bool Update(string Id, DmEventT data)
         {
             var model = dbContext.DmEventT.SingleOrDefault(x => x.EventId == Id);
             if (model == null) return false;
-            model = JsonConvert.DeserializeObject<DmEventT>(jsonData);
+            model = data;
             dbContext.DmEventT.Update(model);
             return dbContext.SaveChanges() > 0;
         }

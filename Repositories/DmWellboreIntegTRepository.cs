@@ -1,10 +1,7 @@
 ﻿using BigData.Helpers;
 using BigData.Models;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BigData.Repositories
 {
@@ -22,19 +19,18 @@ namespace BigData.Repositories
             return dbContext.DmWellboreIntegT.Select(x => x).ToList();
         }
 
-        public bool Create(string jsonData)
+        public bool Create(DmWellboreIntegT data)
         {
-            var model = JsonConvert.DeserializeObject<DmWellboreIntegT>(jsonData);
-            model.WellboreIntegId = NormalHelper.GenerateNormalKey();
-            dbContext.DmWellboreIntegT.Add(model);
+            data.WellboreIntegId = NormalHelper.GenerateNormalKey();
+            dbContext.DmWellboreIntegT.Add(data);
             return dbContext.SaveChanges() > 0;
         }
 
-        public bool Update(string Id, string jsonData)
+        public bool Update(string Id, DmWellboreIntegT data)
         {
             var model = dbContext.DmWellboreIntegT.SingleOrDefault(x => x.WellboreIntegId == Id);
             if (model == null) return false;
-            model = JsonConvert.DeserializeObject<DmWellboreIntegT>(jsonData);
+            model = data;
             dbContext.DmWellboreIntegT.Update(model);
             return dbContext.SaveChanges() > 0;
         }
